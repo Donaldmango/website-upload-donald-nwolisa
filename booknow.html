@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Book Now | Green Solutions</title>
+  <meta name="description" content="Book a consultation or service with Green Solutions. Choose a time and get started on your journey toward sustainability." />
+  <meta name="keywords" content="Green Solutions booking, sustainability appointment, eco services" />
+  <meta name="author" content="Green Solutions" />
+ 
+
+   <link rel="stylesheet" href="cssforwebsite.css">
+</head>
+  
+  
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>GreenTech Solutions</h1>
+      <p>Book Your Sustainable Consultation Today</p>
+    </div>
+    <img src="GTechSol.JPEG" alt="Green Solutions Logo" />
+  </header>
+
+  <nav>
+        <ul class="nav justify-content-center flex-wrap my-3">
+            <li class="nav-item"><a class="nav-link text-light font-weight-bold" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-light font-weight-bold" href="aboutus.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link text-light font-weight-bold" href="contactus.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link text-light font-weight-bold" href="booknow.html">Book Now</a></li>
+            <li class="nav-item"><a class="nav-link text-light font-weight-bold" href="quicktips.html">Quick Tips</a></li>
+        </ul>
+    </nav>
+
+
+  <main>
+    <h2>Book a Service</h2>
+   <form id="book-form" onsubmit="return validateBookingForm()">
+  <div class="form-group">
+    <label for="fullName">Full Name</label>
+    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Your full name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="you@gmail.com" required />
+  </div>
+
+  <div class="form-group">
+    <label for="date">Preferred Date</label>
+    <input type="date" class="form-control" id="date" name="date" required />
+  </div>
+
+  <div class="form-group">
+    <label for="service">Select a Service</label>
+    <select class="form-control" id="service" name="service" required>
+      <option value="">-- Please choose an option --</option>
+      <option value="energyAudit">Home Energy Audit</option>
+      <option value="solarConsult">Solar Panel Consultation</option>
+      <option value="wasteReduction">Waste Reduction Planning</option>
+      <option value="greenLandscaping">Eco-Friendly Landscaping</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-outline-light mt-2">Book Appointment</button>
+</form>
+
+<!-- JavaScript Validation Script -->
+<script>
+  function validateBookingForm() {
+    var name = document.getElementById("fullName").value;
+    var email = document.getElementById("email").value;
+    var date = document.getElementById("date").value;
+    var service = document.getElementById("service").value;
+
+    // Check if all fields are filled
+    if (name === "" || email === "" || date === "" || service === "") {
+      alert("Please fill out all fields.");
+      return false;
+    }
+
+    // You can add more complex validation here if needed (e.g., regex for email)
+    // Redirect to thank you page
+    window.location.href = "thankyou-booking.html"; // redirect to the thank you page
+    return false; // Prevent form submission to server
+  }
+</script>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Green Solutions. All rights reserved.</p>
+  </footer>
+
+
+    <!-- jQuery library -->
+     <script src="js/jquery-3.2.1.slim.min.js"></script>
+
+    <!-- Popper -->
+     <script src="js/popper.min.js"></script>
+
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+     <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+	
+
+
+	
+
+
+	<
+
